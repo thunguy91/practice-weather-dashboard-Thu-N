@@ -13,11 +13,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class WeatherService {
 
-    private String apiKey;
-
     public WeatherResponse getWeather(String city) {
         Dotenv dotenv = Dotenv.load();
-        this.apiKey = dotenv.get("WEATHER_API_KEY");
+        String apiKey = dotenv.get("WEATHER_API_KEY");
 
         try {
             String encodedCity = URLEncoder.encode(city, StandardCharsets.UTF_8);
