@@ -50,7 +50,7 @@ public class WeatherService {
             );
 
         } catch (Exception e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             throw new RuntimeException("Failed to fetch weather");
         }
     }
